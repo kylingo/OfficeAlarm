@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "packager": "electron-packager ./OfficeAl OfficeAlarm --all --out ./output --version 1.0.0 --overwrite --icon=./app/img/icon_app.ico"
+    "packager": "electron-packager ./app OfficeAlarm --all --out ./output --version 1.0.0 --overwrite --icon=./app/img/icon_app.ico"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
