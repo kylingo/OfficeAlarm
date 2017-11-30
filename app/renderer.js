@@ -40,13 +40,30 @@ advancedNotificationButton.addEventListener('click', function () {
 const BrowserWindow = require('electron').remote.BrowserWindow
 const newWindowBtn = document.getElementById('new-window')
 newWindowBtn.addEventListener('click', function (event) {
+    openWindow()
+})
+
+// 打开窗口
+function openWindow() {
     const modalPath = path.join('file://', __dirname, './test.html')
     let win = new BrowserWindow({ width: 600, height: 400 })
     win.on('close', function () { win = null })
     win.loadURL(modalPath)
     win.show()
-})
+}
 
+// 打开全屏窗口
+function openFullWindow() {
+    openFullWindow('./test.html')
+}
+
+function openFullWindow(url) {
+    const modalPath = path.join('file://', __dirname, url)
+    let win = new BrowserWindow({ width: window.screen.width, height: window.screen.height })
+    win.on('close', function () { win = null })
+    win.loadURL(modalPath)
+    win.show()
+}
 
 // 打开一个不见得窗口
 const newGongWindowBtn = document.getElementById('new-gone-window')
@@ -56,3 +73,17 @@ newGongWindowBtn.addEventListener('click', function (event) {
     win.on('close', function () { win = null })
     win.show()
 })
+
+// 定时器
+const newTimerBtn = document.getElementById('btn-timer');
+newTimerBtn.addEventListener('click', function () {
+    setTimeout(function () {
+        // alert("timer 5s")
+        openAlarmWindow()
+    }, 5000);
+})
+
+// 打开闹钟页面
+function openAlarmWindow() {
+    openFullWindow("./alarm.html");
+}

@@ -74,10 +74,10 @@ let template = [{
         role: 'redo'
     }]
 }]
-app.on('ready', function () {
-    const customMenu = Menu.buildFromTemplate(template)
-    Menu.setApplicationMenu(customMenu)
-})
+// app.on('ready', function () {
+//     const customMenu = Menu.buildFromTemplate(template)
+//     Menu.setApplicationMenu(customMenu)
+// })
 
 // 上下文菜单
 const MenuItem = electron.MenuItem
