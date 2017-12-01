@@ -2,10 +2,6 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 
-// 接口测试
-document.getElementById('btn_api').addEventListener('click')
-
-
 // 普通通知
 const normalNotification = {
     title: '基本通知',
@@ -89,5 +85,5 @@ newTimerBtn.addEventListener('click', function () {
 
 // 打开闹钟页面
 function openAlarmWindow() {
-    openFullWindow("./alarm_show.html");
+    openFullWindow("./alarm.html");
 }
