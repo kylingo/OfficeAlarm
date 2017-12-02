@@ -5,6 +5,7 @@
     <title>办公室闹钟</title>
   </head>
   <body>
+    <span>API测试</span><br/>
     <button id="basic-noti">基本通知</button>
     <button id="advanced-noti">高级通知</button>
     <br/>
@@ -21,6 +22,34 @@
     <label for="input-alarm-minute"><input id="input-alarm-minute" maxlength="2" size="2"/></label>
     <span>分</span>
     <button id="btn-alarm">定时闹钟</button>
+    <br/>
+
+    <br/><br/><span>休息提醒</span>
+    <br/>
+    <span>上班：</span>
+    <input id="input-work-start-hour" value="09" maxlength="2" size="2"/>
+    <span>时 - </span>
+    <input id="input-work-end-hour" value="18" maxlength="2" size="2"/>
+    <span>时</span>
+
+    <br/><span>叮叮：</span>
+    <input id="input-work-remind-minute" value="55" maxlength="2" size="2"/>
+    <span>分</span>
+
+    <br/><br/><span>用餐提醒</span>
+    <br/>
+    <span>午餐：</span>
+    <input id="input-lunch-hour" value="12" maxlength="2" size="2"/>
+    <span>时 - </span>
+    <input id="input-lunch-minute" value="25" maxlength="2" size="2"/>
+    <span>分</span>
+
+    <br/>
+    <span>晚餐：</span>
+    <input id="input-dinner-hour" value="18" maxlength="2" size="2"/>
+    <span>时 - </span>
+    <input id="input-dinner-minute" value="10" maxlength="2" size="2"/>
+    <span>分</span>
 
     <script>
       // You can also require other files to run in this process
