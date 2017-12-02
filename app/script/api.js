@@ -87,7 +87,7 @@ newTimerBtn.addEventListener('click', function () {
 
 // 打开闹钟页面
 function openAlarmWindow() {
-    openFullWindow("./alarm.html")
+    openFullWindow("../section/alarm.html")
 }
 
 // 闹钟
