@@ -6,36 +6,38 @@
     <link rel="stylesheet" href="./assets/css/index.css">
   </head>
   <body>
-    <span>当前时间：</span><span id="span-current-time"></span><br/><br/>
+    <div align="left" >
+      <span>当前时间：</span><span id="span-current-time"></span><br/><br/>
 
-    <span>休息提醒</span><br/>
-    <span>上班：</span>
-    <input id="input-work-start-hour" value="09" maxlength="2" size="2"/>
-    <span>时 - </span>
-    <input id="input-work-end-hour" value="18" maxlength="2" size="2"/>
-    <span>时</span><br/>
+      <span>休息提醒</span><br/>
+      <span>上班：</span>
+      <input id="input-work-start-hour" value="09" maxlength="2" size="2"/>
+      <span>时 - </span>
+      <input id="input-work-end-hour" value="18" maxlength="2" size="2"/>
+      <span>时</span><br/>
 
-    <span>叮叮：</span>
-    <input id="input-work-remind-minute" value="23" maxlength="2" size="2"/>
-    <span>分</span><br/><br/>
+      <span>叮叮：</span>
+      <input id="input-work-remind-minute" value="55" maxlength="2" size="2"/>
+      <span>分</span><br/><br/>
 
-    <span>用餐提醒</span><br/>
-    <span>午餐：</span>
-    <input id="input-lunch-hour" value="12" maxlength="2" size="2"/>
-    <span>时 - </span>
-    <input id="input-lunch-minute" value="25" maxlength="2" size="2"/>
-    <span>分</span>
-    <span id="span-lunch-error"></span><br/>
+      <span>用餐提醒</span><br/>
+      <span>午餐：</span>
+      <input id="input-lunch-hour" value="12" maxlength="2" size="2"/>
+      <span>时 - </span>
+      <input id="input-lunch-minute" value="25" maxlength="2" size="2"/>
+      <span>分</span>
+      <span id="span-lunch-error"></span><br/>
 
-    <span>晚餐：</span>
-    <input id="input-dinner-hour" value="18" maxlength="2" size="2"/>
-    <span>时 - </span>
-    <input id="input-dinner-minute" value="15" maxlength="2" size="2"/>
-    <span>分</span>
-    <span id="span-dinner-error"></span><br/>
-    <br/><br/>
+      <span>晚餐：</span>
+      <input id="input-dinner-hour" value="18" maxlength="2" size="2"/>
+      <span>时 - </span>
+      <input id="input-dinner-minute" value="15" maxlength="2" size="2"/>
+      <span>分</span>
+      <span id="span-dinner-error"></span><br/>
+      <br/>
 
-    <button id="btn-alarm-confirm">确认</button>
+      <button id="btn-alarm-confirm">修改</button>
+    </div>
 
     <div id="index-footer" align="center">
       <button id="btn-api">API测试</button>
