@@ -139,7 +139,7 @@ function openApiWindow() {
 }
 
 function openAlarmWindow() {
-    openWindow('./section/alarm.html')
+    openFullWindow('./section/alarm.html')
 }
 
 function openLunchWindow() {
@@ -152,11 +152,11 @@ function openDinnerWindow() {
 
 function openWindow(url, width, height) {
     const modalPath = path.join('file://', __dirname, url)
-    if (!isNaN(Number(width))) {
-        width = 600
+    if (isNaN(Number(width))) {
+        width = 800
     }
-    if (!isNaN(Number(height))) {
-        height = 400
+    if (isNaN(Number(height))) {
+        height = 600
     }
     let win = new BrowserWindow({width: width, height: height})
     win.on('close', function () {

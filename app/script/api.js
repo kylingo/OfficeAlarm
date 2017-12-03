@@ -45,8 +45,8 @@ newWindowBtn.addEventListener('click', function () {
 
 // 打开窗口
 function openWindow() {
-    const modalPath = path.join('file://', __dirname, './test.html')
-    let win = new BrowserWindow({width: 600, height: 400})
+    const modalPath = path.join('file://', __dirname, './../section/alarm.html')
+    let win = new BrowserWindow({width: window.screen.width, height: window.screen.height})
     win.on('close', function () {
         win = null
     })

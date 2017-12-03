@@ -24,7 +24,7 @@ function createWindow () {
   }))
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
@@ -83,10 +83,10 @@ let template = [{
 const MenuItem = electron.MenuItem
 const ipc = electron.ipcMain
 const menu = new Menu()
-menu.append(new MenuItem({label:'Menu1'}))
+menu.append(new MenuItem({label:'菜单1'}))
 menu.append(new MenuItem({type: 'separator'}))
-menu.append(new MenuItem({label: 'Menu2'}))
-menu.append(new MenuItem({label: 'Menu3', type: 'checkbox', checked: true}))
+menu.append(new MenuItem({label: '菜单2'}))
+menu.append(new MenuItem({label: '菜单3', type: 'checkbox', checked: true}))
 
 app.on('browser-window-created', function (event, win) {
     win.webContents.on('context-menu', function (e, params) {
