@@ -3,40 +3,72 @@
   <head>
     <meta charset="UTF-8">
     <title>叮叮叮</title>
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <title>Hello Amaze UI</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="assets/i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <link rel="stylesheet" href="assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/index.css">
   </head>
   <body>
-    <div align="left" >
+    <div id="index-body" align="center">
       <span>当前时间：</span><span id="span-current-time"></span><br/><br/>
 
-      <span>休息提醒</span><br/>
+      <span class="index-title">休息提醒</span><br/>
       <span>上班：</span>
       <input id="input-work-start-hour" value="09" maxlength="2" size="2"/>
-      <span>时 - </span>
+      <span>时 ~ </span>
       <input id="input-work-end-hour" value="18" maxlength="2" size="2"/>
       <span>时</span><br/>
 
       <span>叮叮：</span>
+        <span></span>
       <input id="input-work-remind-minute" value="55" maxlength="2" size="2"/>
-      <span>分</span><br/><br/>
+      <span>分</span><span class="index-notice">(休息喝水)</span><br/><br/>
 
-      <span>用餐提醒</span><br/>
+      <span class="index-title">用餐提醒</span><br/>
       <span>午餐：</span>
       <input id="input-lunch-hour" value="12" maxlength="2" size="2"/>
-      <span>时 - </span>
+      <span>时 : </span>
       <input id="input-lunch-minute" value="25" maxlength="2" size="2"/>
       <span>分</span>
       <span id="span-lunch-error"></span><br/>
 
       <span>晚餐：</span>
       <input id="input-dinner-hour" value="18" maxlength="2" size="2"/>
-      <span>时 - </span>
+      <span>时 : </span>
       <input id="input-dinner-minute" value="15" maxlength="2" size="2"/>
       <span>分</span>
       <span id="span-dinner-error"></span><br/>
       <br/>
 
-      <button id="btn-alarm-confirm">修改</button>
+      <button id="btn-alarm-confirm" class="am-btn am-btn-secondary">修改</button>
     </div>
 
     <div id="index-footer" align="center">

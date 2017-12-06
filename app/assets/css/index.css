@@ -5,3 +5,17 @@
     position: fixed;
     bottom: 0;
 }
+
+#index-body {
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+}
+
+.index-title {
+    color: #087ACB;
+}
+
+.index-notice {
+    color: #999999;
+}

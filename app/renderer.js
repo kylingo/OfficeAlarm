@@ -85,10 +85,6 @@ function formatTime(time) {
 
 // 修改参数
 const btnConfirm = document.getElementById('btn-alarm-confirm')
-btnConfirm.style.color = 'blue'
-btnConfirm.style.fontSize = 'middle'
-btnConfirm.style.padding = '5px'
-btnConfirm.style.marginLeft = '50px'
 btnConfirm.addEventListener('click', function () {
     saveInput()
     alert("修改成功")
