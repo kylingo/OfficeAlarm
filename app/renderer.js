@@ -25,8 +25,9 @@ function checkRestTime(hour, minute, second) {
     const workStartHour = Number(inputWorkStart.value)
     const workEndHour = Number(inputWorkEnd.value)
     const remindMinute = Number(inputRemindMinute.value)
-    if (minute == remindMinute && second == 0) {
-        if (hour >= workStartHour && hour <= workEndHour) {
+    if (minute === remindMinute && second === 0) {
+        // 过滤掉中午吃饭时间
+        if (hour >= workStartHour && hour <= workEndHour && hour !== 12 && hour !== 13) {
             console.log("hour:" + hour + " minute:" + minute + " second:" + second +
                 " remindMinute:" + remindMinute)
             openAlarmWindow()
@@ -40,7 +41,7 @@ function checkRestTime(hour, minute, second) {
 function checkLunchTime(hour, minute, second) {
     const lunchHour = Number(inputLunchHour.value)
     const lunchMinute = Number(inputLunchMinute.value)
-    if (hour == lunchHour && minute == lunchMinute && second == 0) {
+    if (hour === lunchHour && minute === lunchMinute && second === 0) {
         console.log("current time:" + hour + ":" + minute + ":" + second +
             " lunch time:" + lunchHour + ":" + lunchMinute)
         openLunchWindow()
@@ -51,7 +52,7 @@ function checkLunchTime(hour, minute, second) {
 function checkDinnerTime(hour, minute, second) {
     const dinnerHour = Number(inputDinnerHour.value)
     const dinnerMinute = Number(inputDinnerMinute.value)
-    if (hour == dinnerHour && minute == dinnerMinute && second == 0) {
+    if (hour === dinnerHour && minute === dinnerMinute && second === 0) {
         console.log("current time:" + hour + ":" + minute + ":" + second +
             " dinner time:" + dinnerHour + ":" + dinnerMinute)
         openDinnerWindow()
@@ -118,7 +119,7 @@ function saveItem(inputElement) {
 
 function restoreItem(inputElement) {
     const value = localStorage.getItem(inputElement.id)
-    if (value != null) {
+    if (value !== null) {
         inputElement.value = value
     }
 }
