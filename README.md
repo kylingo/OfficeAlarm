@@ -1,7 +1,7 @@
 # OfficeAlarm
 =======
 
-## Basic
+## Env
 ```
 brew install ruby
 brew install node
@@ -16,16 +16,25 @@ npm install electron --save-dev
 npm start
 ```
 
+## Run
+````
+npm start
+or
+electron app
+````
+
 ## Packager
 ```
 npm install electron-packager --save-dev
 npm run-script packager
 ```
 
-## electron
+## Dmg
 ````
-electron app
+appdmg appdmg.json OfficeAlarm.dmg
+
 ````
+
 
 ## 参考资料
 - [electron打包](https://segmentfault.com/a/1190000011908324)
