@@ -151,3 +151,8 @@ alarmBtn.addEventListener('click', function () {
         openAlarmWindow()
     }, totalTime)
 })
+
+// 测试
+document.getElementById('btn-test').addEventListener('click', function () {
+    confirm("主人，请休息一下吧！！！")
+})
