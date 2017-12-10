@@ -17,6 +17,9 @@ const inputLunchMinute = document.getElementById('input-lunch-minute')
 const inputDinnerHour = document.getElementById('input-dinner-hour')
 const inputDinnerMinute = document.getElementById('input-dinner-minute')
 
+// 是否加班
+const cbOverTime = document.getElementById('cb-over-time');
+
 // 恢复数据
 restoreInput()
 
@@ -69,12 +72,20 @@ function updateTime() {
     const hour = date.getHours()
     const minute = date.getMinutes()
     const second = date.getSeconds()
+    const week = date.getDay();
     spanCurTime.innerHTML = formatTime(hour) + ":" + formatTime(minute) + ":" + formatTime(second)
 
     // 检查提醒
-    checkRestTime(hour, minute, second)
-    checkLunchTime(hour, minute, second)
-    checkDinnerTime(hour, minute, second)
+    if (isOverTime() || isWorkDay(week)) {
+        checkRestTime(hour, minute, second)
+        checkLunchTime(hour, minute, second)
+        checkDinnerTime(hour, minute, second)
+    }
+}
+
+function isWorkDay(week) {
+    // 周六和周日是非工作日
+    return week != 6 && week != 0
 }
 
 function formatTime(time) {
@@ -100,6 +111,7 @@ function saveInput() {
     saveItem(inputLunchMinute)
     saveItem(inputDinnerHour)
     saveItem(inputDinnerMinute)
+    saveCheckBox(cbOverTime)
 }
 
 // 恢复数据
@@ -111,6 +123,7 @@ function restoreInput() {
     restoreItem(inputLunchMinute)
     restoreItem(inputDinnerHour)
     restoreItem(inputDinnerMinute)
+    restoreCheckBox(cbOverTime)
 }
 
 function saveItem(inputElement) {
@@ -122,6 +135,22 @@ function restoreItem(inputElement) {
     if (value !== null) {
         inputElement.value = value
     }
+}
+
+function saveCheckBox(element) {
+    localStorage.setItem(element.id, element.checked)
+}
+
+function restoreCheckBox(element) {
+    const value = localStorage.getItem(element.id)
+    if (value !== null) {
+        console.log("restoreCheckBox set:" + value)
+        element.checked = value === 'true';
+    }
+}
+
+function isOverTime() {
+    return cbOverTime.checked
 }
 
 // 接口测试
