@@ -1,8 +1,12 @@
 # OfficeAlarm
-=============
+一个PC桌面应用，设置办公室闹钟提醒，定时喝水、休息、吃饭等。
 
 ## 软件截图
 <img src="./app/assets/img/AlarmOffice001.png" width="50%" />
+
+## 下载体验
+- [Mac版](http://p0qxa46b3.bkt.clouddn.com/OfficeAlarm_v1.0.0.dmg)
+- [Windows版](http://p0qxa46b3.bkt.clouddn.com/OfficeAlarm-win32-x64_v1.0.0.zip)
 
 ## 环境搭建
 依赖
