@@ -4,7 +4,7 @@
   "description": "A office tools application",
   "main": "main.js",
   "scripts": {
-    "packager": "electron-packager ../app OfficeAlarm --out ./output --platform=darwin --arch=x64 --version 1.0.0 --overwrite --icon=../app/assets/img/icon_app.icns"
+    "packager": "electron-packager ../app OfficeAlarm --out ./output --all --version 1.0.0 --overwrite"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [

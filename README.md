@@ -29,8 +29,16 @@ npm install electron-packager --save-dev
 npm run-script packager
 ```
 
+windows环境
+````
+brew tap caskroom/cask
+brew cask install java xquartz
+brew install wine
+````
+
 ## Dmg
 ````
+electron-packager ../app OfficeAlarm --out ./output --platform=darwin --arch=x64 --version 1.0.0 --overwrite --icon=../app/assets/img/icon_app.icns
 appdmg appdmg.json OfficeAlarm.dmg
 
 ````
