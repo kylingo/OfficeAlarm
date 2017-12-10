@@ -1,48 +1,47 @@
 # OfficeAlarm
 =======
 
-## Env
+## 软件截图
+<img src="./app/assets/img/AlarmOffice001.png" width="50%" />
+
+## 环境搭建
+依赖
 ```
+// 以mac环境为例
 brew install ruby
 brew install node
-brew install
+brew install npm
 npm config set registry https://registry.npm.taobao.org
 npm install -g cnpm --registry=https://registry.npm.taobao.org
-```
-
-## Install
-```
 npm install electron --save-dev
-npm start
 ```
 
-## Run
+运行
 ````
+// 进入app目录
 npm start
 or
 electron app
 ````
 
-## Packager
+打包
 ```
+// 打包前，先安装electron-packager
 npm install electron-packager --save-dev
+// 在pack目录，执行打包
 npm run-script packager
-```
 
-windows环境
-````
+// windows安装包依赖
 brew tap caskroom/cask
 brew cask install java xquartz
 brew install wine
-````
 
-## Dmg
-````
+// Mac环境打包
 electron-packager ../app OfficeAlarm --out ./output --platform=darwin --arch=x64 --version 1.0.0 --overwrite --icon=../app/assets/img/icon_app.icns
+
+// 生成DMG文件
 appdmg appdmg.json OfficeAlarm.dmg
-
 ````
-
 
 ## 参考资料
 - [electron打包](https://segmentfault.com/a/1190000011908324)
