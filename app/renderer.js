@@ -95,6 +95,12 @@ function formatTime(time) {
     return time
 }
 
+// 休息
+const btnRest = document.getElementById('btn-alarm-rest')
+btnRest.addEventListener('click', function () {
+    openRestWindow()
+})
+
 // 修改参数
 const btnConfirm = document.getElementById('btn-alarm-confirm')
 btnConfirm.addEventListener('click', function () {
@@ -174,6 +180,10 @@ function openLunchWindow() {
 
 function openDinnerWindow() {
     openFullWindow('./section/dinner.html')
+}
+
+function openRestWindow() {
+    openFullWindow('./section/rest.html')
 }
 
 function openWindow(url, width, height) {
