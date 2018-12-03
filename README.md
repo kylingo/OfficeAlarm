@@ -5,7 +5,7 @@
 <img src="./app/assets/img/AlarmOffice001.png" width="50%" />
 
 ## 下载体验
-- [Mac版](http://p0qxa46b3.bkt.clouddn.com/OfficeAlarm_v1.0.0.dmg)
+- [Mac版](./resource/dmg/OfficeAlarm.dmg)
 - [Windows版](http://p0qxa46b3.bkt.clouddn.com/OfficeAlarm-win32-x64_v1.0.0.zip)
 
 ## 环境搭建
@@ -44,6 +44,8 @@ brew install wine
 electron-packager ../app OfficeAlarm --out ./output --platform=darwin --arch=x64 --version 1.0.0 --overwrite --icon=../app/assets/img/icon_app.icns
 
 // 生成DMG文件
+安装[appdmg](https://github.com/LinusU/node-appdmg)
+拷贝pack/dmg目录的文件，到pack/output/OfficeAlarm-darwin-x64中
 appdmg appdmg.json OfficeAlarm.dmg
 ````
 
@@ -54,3 +56,8 @@ appdmg appdmg.json OfficeAlarm.dmg
 
 - [WebStorm ES6 语法支持设置](http://www.jianshu.com/p/b4390919a5b5)
 
+## Issue
+- Electron Packager requires Node 4.0 or above.
+    - brew install nodebrew
+    - npm  install  -g  n
+    - n 8.11.4
