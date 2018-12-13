@@ -5,8 +5,10 @@
 <img src="./app/assets/img/AlarmOffice001.png" width="50%" />
 
 ## 下载体验
-- [Mac版](./resource/dmg/OfficeAlarm.dmg)
-- [Windows版](http://p0qxa46b3.bkt.clouddn.com/OfficeAlarm-win32-x64_v1.0.0.zip)
+- [Mac版](http://pjnr4vk1h.bkt.clouddn.com/alarm/OfficeAlarm.dmg)
+- [Windows版](http://pjnr4vk1h.bkt.clouddn.com/alarm/OfficeAlarm-win32-x64.zip)
+
+- [Mac本地版](./resource/dmg/OfficeAlarm.dmg)
 
 ## 环境搭建
 依赖
