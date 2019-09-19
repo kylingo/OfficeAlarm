@@ -1,6 +1,10 @@
 #alarm-div {
     height: 100%;
     width: 100%;
-    margin-top: 300px;
     text-align: center;
+    margin-top: 25%;
+}
+
+#alarm-text {
+    font-size: xx-large;
 }
