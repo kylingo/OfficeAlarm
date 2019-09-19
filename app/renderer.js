@@ -161,7 +161,7 @@ function isOverTime() {
 
 // 接口测试
 const btnApi = document.getElementById('btn-api')
-btnApi.style.visibility = 'hidden'
+// btnApi.style.visibility = 'hidden'
 btnApi.addEventListener('click', function () {
     openApiWindow()
 })
