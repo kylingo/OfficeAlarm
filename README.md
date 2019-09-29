@@ -5,10 +5,8 @@
 <img src="./app/assets/img/AlarmOffice001.png" width="50%" />
 
 ## 下载体验
-- [Mac版](http://pjnr4vk1h.bkt.clouddn.com/alarm/OfficeAlarm.dmg)
+- [Mac版](https://github.com/kylingo/OfficeAlarm/releases/tag/v1.0.1)
 - [Windows版](http://pjnr4vk1h.bkt.clouddn.com/alarm/OfficeAlarm-win32-x64.zip)
-
-- [Mac本地版](./resource/dmg/OfficeAlarm.dmg)
 
 ## 环境搭建
 依赖
