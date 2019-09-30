@@ -1,4 +1,5 @@
 const electron = require('electron')
+const glob = require('glob')
 // Module to control application life.
 const app = electron.app
 // Module to create native browser window.
@@ -60,6 +61,12 @@ app.on('activate', function () {
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
 
+if (process.mas) app.setName('叮叮叮')
+
+function initialize() {
+    loadModule()
+}
+
 // 自定义菜单
 const Menu = electron.Menu
 let template = [{
@@ -97,3 +104,10 @@ ipc.on('show-context-menu', function (event) {
     const win = BrowserWindow.fromWebContents(event.sender)
     menu.popup(win)
 })
+
+function loadModule() {
+    const files = glob.sync(path.join(__dirname, 'main-process/*.js'))
+    files.forEach((file) => { require(file) })
+}
+
+initialize()
