@@ -67,46 +67,8 @@ function initialize() {
     loadModule()
 }
 
-// 自定义菜单
-const Menu = electron.Menu
-let template = [{
-    label: '编辑',
-    submenu: [{
-        label: '撤销',
-        accelerator: 'CmdOrCtrl+Z',
-        role: 'undo'
-    }, {
-        label: '重做',
-        accelerator: 'Shift+CmdOrCtrl+Z',
-        role: 'redo'
-    }]
-}]
-// app.on('ready', function () {
-//     const customMenu = Menu.buildFromTemplate(template)
-//     Menu.setApplicationMenu(customMenu)
-// })
-
-// 上下文菜单
-const MenuItem = electron.MenuItem
-const ipc = electron.ipcMain
-const menu = new Menu()
-menu.append(new MenuItem({label:'菜单1'}))
-menu.append(new MenuItem({type: 'separator'}))
-menu.append(new MenuItem({label: '菜单2'}))
-menu.append(new MenuItem({label: '菜单3', type: 'checkbox', checked: true}))
-
-app.on('browser-window-created', function (event, win) {
-    win.webContents.on('context-menu', function (e, params) {
-        menu.popup(win, params.x, params.y)
-    })
-})
-ipc.on('show-context-menu', function (event) {
-    const win = BrowserWindow.fromWebContents(event.sender)
-    menu.popup(win)
-})
-
 function loadModule() {
-    const files = glob.sync(path.join(__dirname, 'main-process/*.js'))
+    const files = glob.sync(path.join(__dirname, 'main-process/**/*.js'))
     files.forEach((file) => { require(file) })
 }
 
