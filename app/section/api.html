@@ -26,11 +26,16 @@
 
     <button id="btn-test">测试</button>
     <button id="open-file-manager">打开文件管理</button>
+    <button id="select-directory">打开文件或目录</button>
+    <br/>
+    <span>您选择了:</span> <span id="selected-file"></span>
+  <br/>
 
     <script>
       // You can also require other files to run in this process
-      require('../script/api.js')
+      require('../renderer-process/api/api')
       require('../renderer-process/native-ui/ex-links-file-manager/file-manager')
+      require('../renderer-process/dialogs/open-file')
     </script>
   </body>
 </html>
