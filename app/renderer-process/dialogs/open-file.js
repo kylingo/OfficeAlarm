@@ -7,6 +7,6 @@ selectedDirBtn.addEventListener('click', () => {
 })
 
 ipcRenderer.on('selected-directory', (event, path) => {
-    document.getElementById('selected-file').innerText = `${path}`
+    alert(`你选择了：${path}`)
 })
 
