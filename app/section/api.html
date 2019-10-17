@@ -5,18 +5,15 @@
     <title>API测试</title>
   </head>
   <body>
+
     <span>API测试</span><br/>
     <button id="basic-noti">基本通知</button>
     <button id="advanced-noti">高级通知</button>
-    <br/>
-
     <button id="new-window">新建窗口</button>
     <button id="new-gone-window">窗口测试</button>
     <br/>
 
-    <br/>
     <button id="btn-timer">定时器</button>
-    <br/>
     <label for="input-alarm-hour"><input id="input-alarm-hour" maxlength="2" size="2"/></label>
     <span>时</span>
     <label for="input-alarm-minute"><input id="input-alarm-minute" maxlength="2" size="2"/></label>
@@ -24,13 +21,20 @@
     <button id="btn-alarm">定时闹钟</button>
     <br/>
 
-    <button id="btn-test">测试</button>
     <button id="open-file-manager">打开文件管理</button>
     <button id="select-directory">打开文件或目录</button>
     <br/>
 
+    <button id="btn-test">确认对话框</button>
     <button id="error-dialog">错误对话框</button>
     <button id="info-dialog">信息对话框</button>
+    <br/>
+
+    <br/>
+    <span>进程间通信</span>
+    <br/>
+    <button id="async-msg-btn">异步消息</button>
+    <button id="sync-msg-btn">同步消息</button>
 
     <script>
       // You can also require other files to run in this process
@@ -38,6 +42,8 @@
       require('../renderer-process/native-ui/ex-links-file-manager/file-manager')
       require('../renderer-process/dialogs/open-file')
       require('../renderer-process/dialogs/dialog')
+      require('../renderer-process/message/async-msg')
+      require('../renderer-process/message/sync-mgs')
     </script>
   </body>
 </html>
