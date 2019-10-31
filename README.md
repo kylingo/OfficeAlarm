@@ -46,6 +46,8 @@ electron-packager ../app OfficeAlarm --out ./output --platform=darwin --arch=x64
 // 生成DMG文件
 安装[appdmg](https://github.com/LinusU/node-appdmg)
 拷贝pack/dmg目录的文件，到pack/output/OfficeAlarm-darwin-x64中
+cp -rf dmg/* output/OfficeAlarm-darwin-x64/
+cd output/OfficeAlarm-darwin-x64/
 appdmg appdmg.json OfficeAlarm.dmg
 ````
 
