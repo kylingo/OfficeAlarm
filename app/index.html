@@ -40,7 +40,7 @@
     <div id="index-body" align="center">
       <span>当前时间：</span><span id="span-current-time"></span><br/><br/>
 
-      <span class="index-title">休息提醒</span><br/>
+      <span class="index-title">每天八杯水</span><br/>
       <span>上班：</span>
       <input id="input-work-start-hour" value="09" maxlength="2" size="2"/>
       <span>时 ~ </span>
@@ -52,22 +52,29 @@
       <input id="input-work-remind-minute" value="55" maxlength="2" size="2"/>
       <span>分</span><span class="index-notice">(休息喝水)</span><br/><br/>
 
-      <span class="index-title">用餐提醒</span><br/>
+      <span class="index-title">美食不可辜</span><br/>
       <span>午餐：</span>
       <input id="input-lunch-hour" value="12" maxlength="2" size="2"/>
       <span>时 : </span>
-      <input id="input-lunch-minute" value="25" maxlength="2" size="2"/>
+      <input id="input-lunch-minute" value="00" maxlength="2" size="2"/>
       <span>分</span>
       <span id="span-lunch-error"></span><br/>
+
+      <span>午休：</span>
+      <input id="input-rest-hour" value="13" maxlength="2" size="2"/>
+      <span>时 : </span>
+      <input id="input-rest-minute" value="25" maxlength="2" size="2"/>
+      <span>分</span>
+      <span id="span-rest-error"></span><br/>
 
       <span>晚餐：</span>
       <input id="input-dinner-hour" value="18" maxlength="2" size="2"/>
       <span>时 : </span>
-      <input id="input-dinner-minute" value="15" maxlength="2" size="2"/>
+      <input id="input-dinner-minute" value="00" maxlength="2" size="2"/>
       <span>分</span>
       <span id="span-dinner-error"></span><br/>
 
-      <span>周末加班：</span><input id="cb-over-time" type="checkbox"/><br/><br/>
+      <span>周末搬砖：</span><input id="cb-over-time" type="checkbox"/><br/><br/>
 
       <button id="btn-alarm-rest" class="am-btn am-btn-secondary">休息</button>
       <button id="btn-alarm-confirm" class="am-btn am-btn-secondary">更改</button>

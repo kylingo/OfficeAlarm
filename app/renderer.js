@@ -14,6 +14,9 @@ const inputRemindMinute = document.getElementById('input-work-remind-minute')
 const inputLunchHour = document.getElementById('input-lunch-hour')
 const inputLunchMinute = document.getElementById('input-lunch-minute')
 
+const inputRestHour = document.getElementById('input-rest-hour')
+const inputRestMinute = document.getElementById('input-rest-minute')
+
 const inputDinnerHour = document.getElementById('input-dinner-hour')
 const inputDinnerMinute = document.getElementById('input-dinner-minute')
 
@@ -51,6 +54,17 @@ function checkLunchTime(hour, minute, second) {
     }
 }
 
+// 检查午休时间
+function checkRestTime(hour, minute, second) {
+    const restHour = Number(inputRestHour.value)
+    const restMinute = Number(inputRestMinute.value)
+    if (hour === restHour && minute === restMinute && second === 0) {
+        console.log("current time:" + hour + ":" + minute + ":" + second +
+            " rest time:" + restHour + ":" + restMinute)
+        openMiddayRestWindow()
+    }
+}
+
 // 检查晚饭提醒
 function checkDinnerTime(hour, minute, second) {
     const dinnerHour = Number(inputDinnerHour.value)
@@ -79,6 +93,7 @@ function updateTime() {
     if (isOverTime() || isWorkDay(week)) {
         checkRestTime(hour, minute, second)
         checkLunchTime(hour, minute, second)
+        checkRestTime(hour, minute, second)
         checkDinnerTime(hour, minute, second)
     }
 }
@@ -115,6 +130,8 @@ function saveInput() {
     saveItem(inputRemindMinute)
     saveItem(inputLunchHour)
     saveItem(inputLunchMinute)
+    saveItem(inputRestHour)
+    saveItem(inputRestMinute)
     saveItem(inputDinnerHour)
     saveItem(inputDinnerMinute)
     saveCheckBox(cbOverTime)
@@ -127,6 +144,8 @@ function restoreInput() {
     restoreItem(inputRemindMinute)
     restoreItem(inputLunchHour)
     restoreItem(inputLunchMinute)
+    restoreItem(inputRestHour)
+    restoreItem(inputRestMinute)
     restoreItem(inputDinnerHour)
     restoreItem(inputDinnerMinute)
     restoreCheckBox(cbOverTime)
@@ -161,7 +180,7 @@ function isOverTime() {
 
 // 接口测试
 const btnApi = document.getElementById('btn-api')
-// btnApi.style.visibility = 'hidden'
+btnApi.style.visibility = 'hidden'
 btnApi.addEventListener('click', function () {
     openApiWindow()
 })
@@ -171,11 +190,16 @@ function openApiWindow() {
 }
 
 function openAlarmWindow() {
-    openFullWindow('./section/alarm.html')
+    // openFullWindow('./section/alarm.html')
+    openFullWindow('https://cn.bing.com')
 }
 
 function openLunchWindow() {
     openFullWindow('./section/lunch.html')
+}
+
+function openMiddayRestWindow() {
+    openFullWindow('./section/midday-rest.html')
 }
 
 function openDinnerWindow() {
@@ -183,7 +207,7 @@ function openDinnerWindow() {
 }
 
 function openRestWindow() {
-    openFullWindow('./section/rest.html')
+    openFullWindow('https://cn.bing.com')
 }
 
 function openWindow(url, width, height) {
@@ -203,11 +227,15 @@ function openWindow(url, width, height) {
 }
 
 function openFullWindow(url) {
-    const modalPath = path.join('file://', __dirname, url)
+    var modalPath = url
+    if ((url.search("http") === -1) && (url.search("www") === -1)) {
+        modalPath = path.join('file://', __dirname, url)
+    }
     let win = new BrowserWindow({width: window.screen.width, height: window.screen.height})
     win.on('close', function () {
         win = null
     })
+    console.log("openFullWindow url:" + modalPath)
     win.loadURL(modalPath)
     win.show()
 }
