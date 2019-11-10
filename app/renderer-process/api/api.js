@@ -25,7 +25,7 @@ const path = require('path')
 const advancedNotification = {
     title: '附带图像的通知',
     body: '短消息附带自定义图片',
-    icon: path.join(__dirname, './img/icon/icon_app.icns')
+    icon: path.join(__dirname, '../assets/img/AlarmOffice001.png')
 }
 const advancedNotificationButton = document.getElementById('advanced-noti')
 advancedNotificationButton.addEventListener('click', function () {

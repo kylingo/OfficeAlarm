@@ -55,7 +55,7 @@ function checkLunchTime(hour, minute, second) {
 }
 
 // 检查午休时间
-function checkRestTime(hour, minute, second) {
+function checkMiddayRestTime(hour, minute, second) {
     const restHour = Number(inputRestHour.value)
     const restMinute = Number(inputRestMinute.value)
     if (hour === restHour && minute === restMinute && second === 0) {
@@ -64,6 +64,7 @@ function checkRestTime(hour, minute, second) {
         openMiddayRestWindow()
     }
 }
+
 
 // 检查晚饭提醒
 function checkDinnerTime(hour, minute, second) {
@@ -93,14 +94,14 @@ function updateTime() {
     if (isOverTime() || isWorkDay(week)) {
         checkRestTime(hour, minute, second)
         checkLunchTime(hour, minute, second)
-        checkRestTime(hour, minute, second)
+        checkMiddayRestTime(hour, minute, second)
         checkDinnerTime(hour, minute, second)
     }
 }
 
 function isWorkDay(week) {
     // 周六和周日是非工作日
-    return week != 6 && week != 0
+    return week !== 6 && week !== 0
 }
 
 function formatTime(time) {
