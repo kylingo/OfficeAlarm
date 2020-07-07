@@ -17,7 +17,7 @@
   "author": "kylingo",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^2.0.3",
+    "electron": "^9.1.0",
     "electron-packager": "^10.1.2"
   },
   "dependencies": {
