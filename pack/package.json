@@ -4,7 +4,7 @@
   "description": "A office tools application",
   "main": "main.js",
   "scripts": {
-    "packager": "electron-packager ../app OfficeAlarm --out ./output --platform=darwin --arch=x64 --version 1.0.2 --overwrite",
+    "packager": "electron-packager ../app OfficeAlarm --out ./output --platform=darwin --arch=arm64 --version 1.0.2 --overwrite",
     "packager-all": "electron-packager ../app OfficeAlarm --out ./output --all --version 1.0.2 --overwrite"
   },
   "repository": "https://github.com/electron/electron-quick-start",
@@ -17,8 +17,9 @@
   "author": "kylingo",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^2.0.3",
-    "electron-packager": "^10.1.2"
+    "electron": "^11.0.0",
+    "electron-builder": "^22.10.4",
+    "electron-packager": "^14.2.1"
   },
   "dependencies": {
     "glob": "^7.1.5"

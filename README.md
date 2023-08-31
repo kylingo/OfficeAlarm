@@ -18,6 +18,7 @@ brew install npm
 npm config set registry https://registry.npm.taobao.org
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 npm install electron --save-dev
+npm install --save glob
 ```
 
 运行
@@ -41,7 +42,7 @@ brew cask install java xquartz
 brew install wine
 
 // Mac环境打包
-electron-packager ../app OfficeAlarm --out ./output --platform=darwin --arch=x64 --version 1.0.0 --overwrite --icon=../app/assets/img/icon_app.icns
+electron-packager ../app OfficeAlarm --out ./output --platform=darwin --arch=arm64 --version=1.0.5 --overwrite --icon=../app/assets/img/icon_app.icns
 
 // 生成DMG文件
 安装[appdmg](https://github.com/LinusU/node-appdmg)
@@ -50,6 +51,15 @@ cp -rf dmg/* output/OfficeAlarm-darwin-x64/
 cd output/OfficeAlarm-darwin-x64/
 appdmg appdmg.json OfficeAlarm.dmg
 ````
+
+// M1
+````
+npm install --save electron@11
+
+Issue：Electron failed to install correctly, please delete node_modules/electron and try installing again
+npm install electron-fix@11 -g
+````
+
 
 ## 参考资料
 - [electron打包](https://segmentfault.com/a/1190000011908324)

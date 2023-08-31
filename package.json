@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "electron": "^11.5.0",
+    "glob": "^10.3.4"
+  }
+}
